@@ -8,4 +8,14 @@ public class SearchTask implements Callable<Integer>{//SearchTask implements Cal
     public static final int VERTICAL = 1;
     public static final int DIAGONAL = 2;
 
+    private final char[][] matrix;//This is the 2-D character array to search.
+    private final String target;//The target is the word we want to find.
+    private final int direction;// Indicates the direction of the search.
+    public SearchTask(char[][] matrix, String target, int direction){
+        this.matrix = matrix;//Stores the matrix.
+        this.target = target;//Stores the target.
+        this.direction = direction;//Stores the search direction.
+    }
+
+
 }
